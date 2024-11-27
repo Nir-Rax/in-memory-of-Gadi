@@ -17,7 +17,7 @@ import { Component } from "@angular/core";
           </div>
           <div class="col-md-6">
             <div class="image-container">
-              <img src="/assets/images/hero-image.png" alt="גדי רחמים" class="flipped-image" />
+              <img src="assets/images/hero-image.png" alt="גדי רחמים" class="flipped-image" />
             </div>
           </div>
         </div>
