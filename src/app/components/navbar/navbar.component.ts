@@ -7,12 +7,15 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
   imports: [NgbNavModule, NgbCollapseModule],
   template: `
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="nav-container">
-        <a class="navbar-brand" href="#">אתר הנצחה</a>
-        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" [attr.aria-expanded]="!isMenuCollapsed" aria-controls="navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav" [ngbCollapse]="isMenuCollapsed">
+      <div class="container">
+        <div class="d-flex w-100 justify-content-between">
+          <button class="navbar-toggler order-1 order-lg-0" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand order-0 order-lg-0" href="#">לזכרו</a>
+        </div>
+
+        <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#biography" (click)="isMenuCollapsed = true">ביוגרפיה</a>
@@ -121,6 +124,26 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
           transform-origin: top;
           transition: transform 0.35s ease, opacity 0.35s ease;
         }
+
+        .navbar-brand {
+          margin-right: 0;
+        }
+
+        .navbar-toggler {
+          margin-left: 0;
+        }
+
+        .navbar-toggler:focus {
+          box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+        }
+      }
+
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
       }
     `,
   ],

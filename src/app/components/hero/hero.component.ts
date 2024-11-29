@@ -6,13 +6,13 @@ import { Component } from "@angular/core";
   template: `
     <section class="hero-section">
       <div class="hero-container">
-        <div class="row h-100 align-items-center">
-          <div class="col-md-6 text-center text-md-end">
+        <div class="row h-100 align-items-center flex-md-row-reverse">
+          <div class="col-md-6 text-center text-md-start">
             <h1 class="hero-title mb-4">גדי רחמים ז"ל</h1>
-            <p class="hero-subtitle mb-4">"החיים שחי משאירים מורשת נצחית"</p>
+            <p class="hero-subtitle mb-4">גדי רחמים ז"ל נפל בקרב גבורה בציר המתפללים בחברון בשנת 2002. הוא היה לוחם מצטיין, בן ואח אהוב, וחבר נאמן לכל מי שהכיר אותו</p>
             <div class="hero-details">
               <p class="mb-2">1983 - 2002</p>
-              <p>נפל בהגנה על המולדת</p>
+              <p>נפל בקרב הגנה על המולדת</p>
             </div>
           </div>
           <div class="col-md-6">
@@ -27,7 +27,7 @@ import { Component } from "@angular/core";
   styles: [
     `
       .hero-section {
-        height: 90vh;
+        height: 70vh;
         background-color: var(--light-bg);
         padding-top: 76px;
         width: 100%;
@@ -37,7 +37,7 @@ import { Component } from "@angular/core";
         max-width: 1400px;
         margin: 0 auto;
         padding: 0 2rem;
-        height: calc(100vh - 76px);
+        height: calc(100vh - 130px);
       }
 
       .hero-title {
@@ -97,12 +97,17 @@ import { Component } from "@angular/core";
           padding: 0 1rem;
         }
 
+        .h-100 {
+          height: 107% !important;
+        }
+
         .hero-title {
           font-size: 2.5rem;
         }
 
         .hero-subtitle {
-          font-size: 1.2rem;
+          font-size: 1rem;
+          margin-bottom: 8px !important;
         }
 
         .image-container {
