@@ -9,7 +9,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     <section id="battle-story" class="section">
       <div class="container text-bg">
         <h2 class="section-title">סיפור הגבורה</h2>
-        <div class="row align-items-center nir">
+        <div class="row align-items-center pinned-right">
           <div class="col-md-9">
             <div class="battle-story-text">
               <p class="lead">
@@ -66,7 +66,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
         padding: 22px 234px 140px 0px;
       }
 
-      .nir {
+      .pinned-right {
         margin-right: 50px;
       }
 
@@ -100,6 +100,10 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
         .hidden-on-mobile {
           display: none;
+        }
+
+        .pinned-right {
+          margin-right: 0px;
         }
       }
     `,
