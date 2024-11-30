@@ -51,10 +51,10 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
       }
 
       .text-bg {
-        background-image: url("/assets/images/text-bg.png");
+        background-image: url("/in-memory-of-Gadi/assets/images/text-bg.png");
         background-size: cover;
         background-position: center;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         height: fit-content;
         margin-bottom: -20px;
       }

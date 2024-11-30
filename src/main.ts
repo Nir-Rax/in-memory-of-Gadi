@@ -12,11 +12,12 @@ import { FooterComponent } from "./app/components/footer/footer.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { importProvidersFrom } from "@angular/core";
 import { provideAnimations } from "@angular/platform-browser/animations";
+import { CandleMemorialComponent } from "./app/components/candle-memorial/candle-memorial.component";
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [NavbarComponent, HeroComponent, AboutComponent, GalleryComponent, VideosComponent, BattleStoryComponent, StoriesComponent, FooterComponent],
+  imports: [NavbarComponent, HeroComponent, AboutComponent, GalleryComponent, VideosComponent, BattleStoryComponent, StoriesComponent, FooterComponent, CandleMemorialComponent],
   template: `
     <app-navbar></app-navbar>
     <app-hero></app-hero>
@@ -25,6 +26,7 @@ import { provideAnimations } from "@angular/platform-browser/animations";
     <app-videos></app-videos>
     <app-battle-story></app-battle-story>
     <!-- <app-stories></app-stories> -->
+    <!-- <app-candle-memorial></app-candle-memorial> -->
     <app-footer></app-footer>
   `,
 })

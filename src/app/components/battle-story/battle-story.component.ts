@@ -18,13 +18,13 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
                 מטווח קצר. במקום התנהלו חילופי אש קשים אשר הקשו על פעולות החילוץ.
               </p>
               <p class="lead">
-                בשעה 19:00 נפתחה אש משני מוקדים ע"י שלושה מחבלים לעבר כוח צה"ל ומג"ב שאבטחו את ציר המתפללים שבין מערכת המכפלה לקריית ארבע. צוות מג"ב שכלל את גדי רחמים ז"ל ושני לוחמים נוספים היו בסיור ממנוע על הציר והגיע לנקודת ההיתקלות של
+                בשעה 19:00 נפתחה אש משני מוקדים ע"י שלושה מחבלים לעבר כוח צה"ל ומג"ב שאבטחו את ציר המתפללים שבין מערכת המכפלה לקריית ארבע. צוות מג"ב שכלל את גדי רחמים הי"ד ושני לוחמים נוספים היו בסיור ממנוע על הציר והגיע לנקודת ההיתקלות של
                 סיור רגלי צבאי עם המחבלים ליד מבנה לאורך הסמטה, שם נפתחה עליהם אש כבדה ממנה נפצעו הלוחמים מרסיסי-רימונים.
               </p>
               <p class="lead">במקביל, ג'יפ ובו גדי וקצין אחר נכנסו לציר המתפללים שממנו נשמעו קול ירי מאסיבי, על-מנת לאתר את מיקום המחבלים ואז נפתחה לכיוונם אש שפגעה בשניהם.</p>
               <p class="lead">
                 בשלב זה שמעו גדי ולוחם נוסף את קצין-המבצעים מודיע בקשר שהוא נפגע, הם החליטו להיכנס לסמטה על מנת לסייע בחילוצו, על אף שהם פצועים. גדי ושני הלוחמים נכנסו לסמטה ארבע פעמים כאשר בשלוש הפעמים הראשונות חלצו חיילים וביניהם את המח"ט
-                דרור ויינברג ז"ל, כל זאת תחת אש.
+                דרור ויינברג הי"ד, כל זאת תחת אש.
               </p>
               <p class="lead">
                 בפעם הרביעית נכנסו יחד עם כיתת הכוננות לסמטה, הגיעו לג'יפ של קצין המבצעים וגדי ירד מהרכב על מנת לנפץ את פנסי הג'יפ שלו שחשפו את מיקומם באפלה, ברגעים אלה נפתחה לעברם אש מאסיבית ממנה נהרגו גדי רחמים הי"ד, לוחם נוסף ושלושה
@@ -35,6 +35,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
           </div>
         </div>
       </div>
+      <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf56kZG6j7tIcAlq0iyU5qmUy57f_jvTWPjOCWQGDndxBHeNg/viewform?embedded=true" width="640" height="551" frameborder="0" marginheight="0" marginwidth="0">בטעינה…</iframe> -->
     </section>
   `,
   styles: [
@@ -50,11 +51,11 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
       }
 
       .text-bg {
-        background-image: url("/assets/images/text-bg.png");
+        background-image: url("/in-memory-of-Gadi/assets/images/text-bg.png");
         background-repeat: no-repeat;
         background-size: 75% 125%;
         background-position: center;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         height: fit-content;
       }
 
@@ -104,6 +105,10 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
         .pinned-right {
           margin-right: 0px;
+        }
+
+        .section-title {
+          padding-top: 20px;
         }
       }
     `,

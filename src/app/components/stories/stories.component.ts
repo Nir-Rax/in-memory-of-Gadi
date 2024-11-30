@@ -1,44 +1,34 @@
-import { Component } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CommonModule } from '@angular/common';
-import { Story } from '../../models/story.interface';
-import { stories } from '../../data/stories.data';
+import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { stories } from "../../data/stories.data";
+import { ExpandableStoryCardComponent } from "../expandable-story-card/expandable-story-card.component";
 
 @Component({
-  selector: 'app-stories',
+  selector: "app-stories",
   standalone: true,
-  imports: [NgbModule, CommonModule],
+  imports: [CommonModule, ExpandableStoryCardComponent],
   template: `
-    <section id="stories" class="section">
-      <div class="container">
-        <h2 class="section-title">סיפורים וזכרונות</h2>
-        <div class="row">
-          <div class="col-md-6 mb-4" *ngFor="let story of stories">
-            <div class="testimonial-card">
-              <p class="story-content">{{ story.content }}</p>
-              <div class="story-author">
-                <strong>{{ story.author }}</strong>
-                <span class="text-muted"> - {{ story.relation }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="stories-container">
+      <h2>סיפורים וזכרונות</h2>
+      <div class="stories-grid">
+        <app-expandable-story-card *ngFor="let story of stories" [story]="story"></app-expandable-story-card>
       </div>
-    </section>
+    </div>
   `,
-  styles: [`
-    .story-content {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-    
-    .story-author {
-      font-size: 1rem;
-      color: var(--primary-color);
-    }
-  `]
+  styles: [
+    `
+      .stories-container {
+        padding: 1rem;
+      }
+
+      .stories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+    `,
+  ],
 })
 export class StoriesComponent {
-  stories: Story[] = stories;
+  stories = stories;
 }
