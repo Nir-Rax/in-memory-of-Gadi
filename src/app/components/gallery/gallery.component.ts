@@ -134,6 +134,7 @@ import { trigger, transition, style, animate, state } from "@angular/animations"
         font-size: 1.1rem;
         color: #2c3e50;
         font-weight: 500;
+        background-color: #e9ddd1;
       }
 
       .toggle-gallery-btn:hover {

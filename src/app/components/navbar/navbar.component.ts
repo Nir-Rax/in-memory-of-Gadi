@@ -9,16 +9,19 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <div class="d-flex w-100 justify-content-between">
-          <button class="navbar-toggler order-1 order-lg-0" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+          <button class="navbar-toggler order-lg-0" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand order-0 order-lg-0" href="#">לזכרו</a>
+          <a class="nav-link order-2 order-lg-" href="https://www.facebook.com/groups/134385629938062/" target="_blank">
+            <i class="fab fa-facebook-square fa-lg"></i>
+          </a>
         </div>
 
         <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#biography" (click)="isMenuCollapsed = true">ביוגרפיה</a>
+              <a class="nav-link" href="#about" (click)="isMenuCollapsed = true">על גדי</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#gallery" (click)="isMenuCollapsed = true">גלריה</a>
@@ -27,7 +30,10 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
               <a class="nav-link" href="#videos" (click)="isMenuCollapsed = true">סרטונים</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#stories" (click)="isMenuCollapsed = true">סיפורים</a>
+              <a class="nav-link" href="#battle-story" (click)="isMenuCollapsed = true">סיפור הגבורה</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#candle-memorial" (click)="isMenuCollapsed = true"></a>
             </li>
           </ul>
         </div>
@@ -76,6 +82,7 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
 
       .navbar-collapse {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        width: 450px;
       }
 
       @media (max-width: 991px) {
@@ -144,6 +151,16 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
 
       .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .fab {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        transition: color 0.3s ease;
+      }
+
+      .fab:hover {
+        color: #ffffff;
       }
     `,
   ],

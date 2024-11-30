@@ -13,6 +13,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { importProvidersFrom } from "@angular/core";
 import { provideAnimations } from "@angular/platform-browser/animations";
 import { CandleMemorialComponent } from "./app/components/candle-memorial/candle-memorial.component";
+import { provideHttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-root",
@@ -26,12 +27,12 @@ import { CandleMemorialComponent } from "./app/components/candle-memorial/candle
     <app-videos></app-videos>
     <app-battle-story></app-battle-story>
     <!-- <app-stories></app-stories> -->
-    <!-- <app-candle-memorial></app-candle-memorial> -->
+    <app-candle-memorial></app-candle-memorial>
     <app-footer></app-footer>
   `,
 })
 export class App {}
 
 bootstrapApplication(App, {
-  providers: [importProvidersFrom(NgbModule), provideRouter([]), provideAnimations()],
+  providers: [importProvidersFrom(NgbModule), provideRouter([]), provideAnimations(), provideHttpClient()],
 }).catch((err) => console.error(err));
