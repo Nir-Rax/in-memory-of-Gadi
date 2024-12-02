@@ -19,7 +19,7 @@ jobs:
           node-version: '18'  # או הגרסה שאתה משתמש בה בפועל
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Build project
         run: ng build --output-path=dist/browser --base-href /in-memory-of-Gadi/
