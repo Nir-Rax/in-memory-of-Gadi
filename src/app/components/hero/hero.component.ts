@@ -42,7 +42,7 @@ import { Component } from "@angular/core";
 
       .hero-title {
         font-size: 3.5rem;
-        color: #1a5276;
+        color: var(--primary-color);
         font-weight: bold;
       }
 
