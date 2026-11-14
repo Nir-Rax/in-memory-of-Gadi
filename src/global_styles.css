@@ -1,13 +1,13 @@
 @import "bootstrap/dist/css/bootstrap.rtl.min.css";
 
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #34495e;
+  --primary-color: #1a365d;
+  --secondary-color: #2c5282;
   --text-color: #212121;
   --light-bg: hsl(210, 20%, 95%);
   --card-bg: #e2e8f0;
   --border-color: #cbd5e1;
-  --header-bg: #2c3e50;
+  --header-bg: #1a365d;
   --header-text: #ffffff;
 }
 
