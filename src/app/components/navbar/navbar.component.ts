@@ -32,9 +32,6 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
             <li class="nav-item">
               <a class="nav-link" href="#battle-story" (click)="isMenuCollapsed = true">סיפור הגבורה</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#candle-memorial" (click)="isMenuCollapsed = true"></a>
-            </li>
           </ul>
         </div>
       </div>
@@ -170,19 +167,15 @@ export class NavbarComponent implements OnInit {
   private lastScrollTop = 0;
 
   ngOnInit() {
-    // Initialize the last scroll position
     this.lastScrollTop = window.pageYOffset;
   }
 
   @HostListener("window:scroll", ["$event"])
   onScroll() {
     const currentScroll = window.pageYOffset;
-
-    // If we're scrolling down and the menu is open, close it
     if (currentScroll > this.lastScrollTop && !this.isMenuCollapsed) {
       this.isMenuCollapsed = true;
     }
-
     this.lastScrollTop = currentScroll;
   }
 }
