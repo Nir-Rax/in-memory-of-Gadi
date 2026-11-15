@@ -1,15 +1,14 @@
 @import "bootstrap/dist/css/bootstrap.rtl.min.css";
 
 :root {
-  --primary-color: #3d312a;
-  --secondary-color: #5c4d42;
-  --accent-color: #c8a97e;
-  --text-color: #2c2623;
-  --light-bg: #f7f4ef;
-  --card-bg: #eae3d5;
-  --border-color: #d5c7b2;
-  --header-bg: #2c2520;
-  --header-text: #f7f4ef;
+  --primary-color: #424242;
+  --secondary-color: #616161;
+  --text-color: #212121;
+  --light-bg: hsl(0, 0%, 74%);
+  --card-bg: #e2e2e2;
+  --border-color: #e0e0e0;
+  --header-bg: #333333;
+  --header-text: #ffffff;
 }
 
 body {
@@ -41,7 +40,7 @@ body {
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--border-color);
 }
 
@@ -55,7 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .placeholder-text {

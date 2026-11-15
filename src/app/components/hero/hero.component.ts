@@ -17,12 +17,7 @@ import { Component } from "@angular/core";
           </div>
           <div class="col-md-6">
             <div class="image-container">
-              <img
-                [src]="imageSrc"
-                (error)="onImageError()"
-                alt="גדי רחמים"
-                class="hero-image"
-              />
+              <img src="assets/images/hero-image.png" alt="גדי רחמים" class="hero-image" />
             </div>
           </div>
         </div>
@@ -32,10 +27,9 @@ import { Component } from "@angular/core";
   styles: [
     `
       .hero-section {
-        min-height: 75vh;
+        height: 70vh;
         background-color: var(--light-bg);
-        padding-top: 90px;
-        padding-bottom: 2rem;
+        padding-top: 76px;
         width: 100%;
       }
 
@@ -43,9 +37,7 @@ import { Component } from "@angular/core";
         max-width: 1400px;
         margin: 0 auto;
         padding: 0 2rem;
-        min-height: calc(75vh - 110px);
-        display: flex;
-        align-items: center;
+        height: calc(100vh - 130px);
       }
 
       .hero-title {
@@ -57,19 +49,16 @@ import { Component } from "@angular/core";
       .hero-subtitle {
         font-size: 1.5rem;
         color: var(--secondary-color);
-        line-height: 1.6;
       }
 
       .hero-details {
         font-size: 1.2rem;
         color: var(--text-color);
-        font-weight: 500;
       }
 
       .image-container {
         background-color: var(--card-bg);
-        border: 3px solid var(--border-color);
-        box-shadow: 0 8px 24px rgba(61, 49, 42, 0.12);
+        border: 2px dashed var(--border-color);
         border-radius: 50%;
         width: 400px;
         height: 400px;
@@ -101,12 +90,15 @@ import { Component } from "@angular/core";
 
       @media (max-width: 768px) {
         .hero-section {
-          min-height: 100vh;
-          padding-top: 85px;
+          height: 100vh;
         }
 
         .hero-container {
           padding: 0 1rem;
+        }
+
+        .h-100 {
+          height: 107% !important;
         }
 
         .hero-title {
@@ -114,40 +106,30 @@ import { Component } from "@angular/core";
         }
 
         .hero-subtitle {
-          font-size: 1.05rem;
-          margin-bottom: 12px !important;
+          font-size: 1rem;
+          margin-bottom: 8px !important;
         }
 
         .image-container {
-          width: 290px;
-          height: 290px;
-          margin-top: 2.5rem;
+          width: 300px;
+          height: 300px;
+          margin-top: 2rem;
         }
 
         .hero-image {
           width: 84%;
           height: 136%;
-          margin-bottom: 98px;
+          margin-bottom: 101px;
           margin-left: 21px;
         }
 
         .hero-details {
-          font-size: 1.15rem;
+          font-size: 1.2rem;
           color: var(--text-color);
-          margin-bottom: 30px;
+          margin-bottom: 40px;
         }
       }
     `,
   ],
 })
-export class HeroComponent {
-  imageSrc = "assets/images/hero-image.png";
-  private fallbackAttempted = false;
-
-  onImageError() {
-    if (!this.fallbackAttempted) {
-      this.fallbackAttempted = true;
-      this.imageSrc = "/in-memory-of-Gadi/assets/images/hero-image.png";
-    }
-  }
-}
+export class HeroComponent {}

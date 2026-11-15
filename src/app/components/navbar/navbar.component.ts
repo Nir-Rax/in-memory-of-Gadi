@@ -8,11 +8,11 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
   template: `
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <div class="d-flex w-100 justify-content-between align-items-center">
+        <div class="d-flex w-100 justify-content-between">
           <button class="navbar-toggler order-lg-0" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand order-0 order-lg-0" href="#">לזכרו של גדי</a>
+          <a class="navbar-brand order-0 order-lg-0" href="#">לזכרו</a>
           <a class="nav-link order-2 order-lg-" href="https://www.facebook.com/groups/134385629938062/" target="_blank">
             <i class="fab fa-facebook-square fa-lg"></i>
           </a>
@@ -32,6 +32,9 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
             <li class="nav-item">
               <a class="nav-link" href="#battle-story" (click)="isMenuCollapsed = true">סיפור הגבורה</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#candle-memorial" (click)="isMenuCollapsed = true"></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -40,11 +43,9 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
   styles: [
     `
       .navbar {
-        background-color: var(--header-bg, #2c2520);
-        padding: 0.85rem 0;
+        background-color: #333333;
+        padding: 1rem 0;
         transition: background-color 0.3s ease;
-        border-bottom: 2px solid var(--accent-color, #c8a97e);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
       }
 
       .nav-container {
@@ -58,19 +59,19 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
 
       .navbar-brand {
         font-weight: bold;
-        color: var(--header-text, #f7f4ef) !important;
+        color: #ffffff !important;
         font-size: 1.4rem;
       }
 
       .nav-link {
-        color: rgba(247, 244, 239, 0.9) !important;
+        color: rgba(255, 255, 255, 0.9) !important;
         font-weight: 500;
         padding: 0.5rem 1rem;
         transition: color 0.3s ease;
       }
 
       .nav-link:hover {
-        color: var(--accent-color, #c8a97e) !important;
+        color: #ffffff !important;
       }
 
       @media (max-width: 768px) {
@@ -86,13 +87,13 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
 
       @media (max-width: 991px) {
         .navbar-collapse {
-          background-color: var(--header-bg, #2c2520);
+          background-color: #333333;
           padding: 1rem;
           position: absolute;
           top: 100%;
           left: 0;
           right: 0;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
           transform-origin: top;
           opacity: 1;
         }
@@ -140,26 +141,26 @@ import { NgbNavModule, NgbCollapseModule } from "@ng-bootstrap/ng-bootstrap";
         }
 
         .navbar-toggler:focus {
-          box-shadow: 0 0 0 0.25rem rgba(200, 169, 126, 0.35);
+          box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
         }
       }
 
       .navbar-toggler {
-        border-color: rgba(247, 244, 239, 0.5);
+        border-color: rgba(255, 255, 255, 0.5);
       }
 
       .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28247, 244, 239, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
       }
 
       .fab {
         font-size: 1.2rem;
-        color: rgba(247, 244, 239, 0.9);
+        color: rgba(255, 255, 255, 0.9);
         transition: color 0.3s ease;
       }
 
       .fab:hover {
-        color: var(--accent-color, #c8a97e);
+        color: #ffffff;
       }
     `,
   ],
@@ -169,15 +170,19 @@ export class NavbarComponent implements OnInit {
   private lastScrollTop = 0;
 
   ngOnInit() {
+    // Initialize the last scroll position
     this.lastScrollTop = window.pageYOffset;
   }
 
   @HostListener("window:scroll", ["$event"])
   onScroll() {
     const currentScroll = window.pageYOffset;
+
+    // If we're scrolling down and the menu is open, close it
     if (currentScroll > this.lastScrollTop && !this.isMenuCollapsed) {
       this.isMenuCollapsed = true;
     }
+
     this.lastScrollTop = currentScroll;
   }
 }
